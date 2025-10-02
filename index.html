@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Simple Calculator app</title>
+</head>
+<body>
+
+  <div class ="container">
+  <center>
+  <h1 id="title"> Simple Calculator App</h1>
+  </center>
+ <center>
+  <div class="calculator">
+    <div class="inputs">
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    </div>
+    <p>=</p>
+    <input type="text" id="result" readonly>
+    <br>
+    <br>
+    <button id="add" onclick="add()">ADD</button>
+    <button id="sub" onclick="sub()">SUB</button>
+    <button id="mul" onclick="mul()">MUL</button>
+    <button id="div" onclick="div()">DIV</button>
+    <button id="mod" onclick="mod()">MOD</button>
+    <button id="clear" onclick="clearResult()">CLEAR</button>
+    <br>
+  </div>
+  </center>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

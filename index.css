@@ -1,0 +1,119 @@
+/* ---------- BODY & BACKGROUND ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('download.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ---------- TITLE ---------- */
+#title {
+    font-size: 3rem;
+    font-weight: 900;
+    background: #7ed6df;
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 50px 0;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+    letter-spacing: 2px;
+    animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+    background: rgba(255, 255, 255, 0);       /* semi-transparent glass effect */
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    height: auto;
+    max-width: 500px;
+    width: 80%;
+    padding: 30px 20px 50px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- INPUTS ---------- */
+.inputs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+input[type="text"], #result {
+    width: 120px;
+    height: 45px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid rgba(0,0,0,0.4);
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+input[type="text"]:focus, #result:focus {
+    border-color: #ff6a00;
+    box-shadow: 0 0 10px rgba(255, 106, 0, 0.7);
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+    width: 60px;
+    height: 35px;
+    margin: 10px;
+    border: 2px solid black;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.2) rotate(-2deg);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* ---------- BUTTON COLORS ---------- */
+#add { background-color: rgba(255, 255, 255, 0); color: white; border-color: #1e7e34; }
+#sub { background-color: rgba(255, 255, 255, 0); color: white; border-color: #bd2d6b; }
+#mul { background-color: rgba(255, 255, 255, 0); color: white; border-color: #0056b3; }
+#div { background-color: rgba(255, 255, 255, 0); color: white; border-color: #a71d2a; }
+#mod { background-color: rgba(255, 255, 255, 0); color: white; border-color: #c5600a; }
+#clear { background-color: rgba(255, 255, 255, 0); color: white; border-color: #212529; width: 75px; }
+
+/* ---------- RESPONSIVE ---------- */
+@media screen and (max-width: 600px) {
+    #title { font-size: 2.2rem; }
+    .inputs { flex-direction: column; gap: 10px; }
+    input[type="text"], #result { width: 90%; }
+    button { width: 50px; height: 35px; margin: 8px; }
+    #clear { width: 60px; }
+}
+
+
